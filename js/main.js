@@ -67,5 +67,25 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarNuevoCarrito();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const template2 = document.querySelector('#templateCarrito');
+    const containerCards = document.querySelector("#container");
+
+    productos.forEach((producto) => {
+        const plantilla2 = template2.content.cloneNode(true);
+
+        plantilla2.querySelector(".img-fluid").src = producto.img;
+        plantilla2.querySelector('h5').textContent = producto.nombre;
+
+        plantilla2.querySelector('.card-text2').textContent = `Precio: $${producto.precio}`;
+
+        plantilla2.querySelector('button').addEventListener("click", () => agregarAlCarrito(producto));
+
+        containerCards.appendChild(plantilla2);
+    });
+
+    actualizarNuevoCarrito();
+});
+
 actualizarNuevoCarrito();
 
