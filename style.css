@@ -54,6 +54,31 @@ header nav img{
     display: inline-flex;
 
 }
+.index-flex{
+    display: flex;
+    align-items: center;
+}
+.index-flex p{
+    padding: 75px;
+    
+}
+.index-flex img{
+    height: 250px;
+    width: auto;
+    padding-right: 50px;
+}
+h1{
+    text-align: center;
+    padding: 100px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
 
 footer{
     margin-top: auto;
